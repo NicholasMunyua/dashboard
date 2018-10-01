@@ -1,0 +1,57 @@
+
+import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class Dashboard {
+    
+    JFrame frame;//frame
+    JTextField field;//to get username
+    JLabel l;//to print on frame
+    JButton button;
+    
+    Dashboard(){
+        
+        frame = new JFrame("Home");//initializing frame.argument passed to apper as title
+        frame.setSize(1500,1300);
+        frame.setLocation(300, 200);
+        frame.getContentPane().setBackground(Color.white);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//program exit when user clicks close
+        
+        l= new JLabel("Chat showing Gender distribution");
+        l.setLocation(30,10);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+        
+        
+        l= new JLabel("column chart showing gender distribution");
+        l.setLocation(800,10);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+     
+       
+        
+        JButton b = new JButton("add user");
+        b.setSize(b.getPreferredSize());
+        b.setLocation(150,500);
+        frame.add(b);
+        
+        JButton c = new JButton("log out");
+        c.setSize(c.getPreferredSize());
+        c.setLocation(600,500);
+        frame.add(c);
+        
+        frame.setVisible(true);//to make it visible
+    }//ending of constructor
+    public static void main(String[] args) {
+        
+        Dashboard Dashboard = new Dashboard();
+    }
+    
+}
