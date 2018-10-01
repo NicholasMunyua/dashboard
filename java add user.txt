@@ -1,0 +1,110 @@
+
+import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+
+public class AddNewUser {
+    
+    JFrame frame;//frame
+    JTextField field;//to get first name
+    JPasswordField p;//field for password
+    JLabel l;//to print on frame
+    JButton button;
+    
+    AddNewUser(){
+        
+        frame = new JFrame("adding user form");//initializing frame.argument passed to apper as title
+        frame.setSize(700,400);
+        frame.setLocation(300, 200);
+        frame.getContentPane().setBackground(Color.blue);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//program exit when user clicks close
+        
+        l= new JLabel("First Name");
+        l.setLocation(10,10);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+        field= new JTextField();
+        field.setColumns(15);
+        field.setSize(field.getPreferredSize());
+        field.setLocation(150,70);
+        field.setToolTipText("First Name");
+        frame.add(field);
+        
+        l= new JLabel("Last Name");
+        l.setLocation(10,40);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+       field= new JTextField();
+        field.setColumns(15);
+        field.setSize(field.getPreferredSize());
+        field.setLocation(150,40);
+        field.setToolTipText("Last Name");
+        frame.add(field);
+        
+        l= new JLabel("Telephone");
+        l.setLocation(10,70);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+        l= new JLabel("Date of Birth");
+        l.setLocation(10,100);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+        
+        
+        field= new JTextField();
+        field.setColumns(15);
+        field.setSize(field.getPreferredSize());
+        field.setLocation(150,10);
+        field.setToolTipText("Telephone");
+        frame.add(field);
+        
+        field= new JTextField();
+        field.setColumns(15);
+        field.setSize(field.getPreferredSize());
+        field.setLocation(150,100);
+        field.setToolTipText("Telephone");
+        frame.add(field);
+        
+        l= new JLabel("GENDER");
+        l.setLocation(10,150);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+        JButton b = new JButton("SAVE USER");
+        b.setSize(b.getPreferredSize());
+        b.setLocation(150,300);
+        frame.add(b);
+        
+        JButton c = new JButton("CLEAR");
+        c.setSize(c.getPreferredSize());
+        c.setLocation(260,300);
+        frame.add(c);
+        
+         JButton d = new JButton("male");
+        d.setSize(d.getPreferredSize());
+        d.setLocation(150,150);
+        frame.add(d);
+        
+        JButton e = new JButton("female");
+        e.setSize(e.getPreferredSize());
+        e.setLocation(260,150);
+        frame.add(e);
+        
+        
+        frame.setVisible(true);//to make it visible
+    }//ending of constructor
+    public static void main(String[] args) {
+        
+        AddNewUser AddNewUser = new AddNewUser();
+    }
+    
+}
